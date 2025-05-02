@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>AMH - Voitures de Luxe</title>
+    <style>
+        body {
+            background-image: url('/images/image.png'); /* Chemin vers l'image de fond */
+            background-size: cover; /* Pour que l'image couvre toute la page */
+            background-position: center; /* Centrer l'image */
+            background-repeat: no-repeat; /* Éviter la répétition de l'image */
+        }
+
+        .embed-image {
+            width: 200px;  /* Taille du carré pour l'image */
+            height: 200px; /* Taille du carré pour l'image */
+            overflow: hidden;  /* Masquer les parties de l'image qui dépassent */
+        }
+    
+        .embed-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* Assure que l'image reste bien dans son carré sans déformation */
+        }
+
+        .embed {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .embed-left {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .embed-right {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .embed-text h2 {
+            font-size: 24px;
+        }
+
+        .embed-text p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blur-background"></div>
+
+    <div class="content">
+        <h1 id="titre_accueil">Bienvenue chez <span class="amh-highlight">AMH</span></h1>
+    
+        <!-- Première section d'embed -->
+        <section class="embed embed-left">
+            <div class="embed-image">
+                <img src="/images/image.copy.png" alt="Excellence & Passion">
+            </div>
+            <div class="embed-text">
+                <h2>Excellence & Passion</h2>
+                <p>
+                    Chez <strong>AMH</strong>, nous incarnons la passion de l'automobile d'exception. Ferrari, Lamborghini, Aston Martin... chaque modèle incarne la perfection technique et le raffinement esthétique.
+                </p>
+            </div>
+        </section>
+
+        <!-- Deuxième section d'embed avec image ajoutée -->
+        <section class="embed embed-right">
+            <div class="embed-image">
+                <img src="/images/Luxury.car.jpg" alt="Service sur-mesure">
+            </div>
+            <div class="embed-text">
+                <h2>Un service sur-mesure</h2>
+                <p>
+                    Bien plus qu’un simple achat, acquérir une voiture chez <strong>AMH</strong>, c’est vivre une expérience de prestige, accompagnée d’un service irréprochable.
+                </p>
+            </div>
+        </section>
+
+        <!-- Troisième section d'embed -->
+        <section class="embed embed-left">
+            <div class="embed-image">
+                <img src="/images/GARAGE.png" alt="Excellence & Passion">
+            </div>
+            <div class="embed-text">
+                <h2>Votre rêve, notre mission</h2>
+                <p>
+                    Notre équipe déniche pour vous les modèles les plus rares et les plus convoités, pour que votre voiture reflète votre exigence et votre personnalité.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
