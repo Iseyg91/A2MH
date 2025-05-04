@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.site-title {
+    color: gold;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-btn {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    color: gold;
+}
+
+.site-logo {
+    height: 40px;
+}
+
+.catalogue-content {
+    padding: 140px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.catalogue-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: gold;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 215, 0, 0.3);
+}
+
+.car-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-name {
+    font-size: 1.4em;
+    margin: 15px;
+    color: gold;
+}
+
+.car-desc {
+    font-size: 0.95em;
+    margin: 0 15px 15px;
+    color: #ccc;
+}
+
+.car-btn {
+    display: block;
+    background-color: gold;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 15px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.car-btn:hover {
+    background-color: #e5c100;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 60px;
+    color: white;
+}
+.car-center-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Section gauche : numéro de téléphone */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;  /* Prend toute la largeur disponible */
+}
+
+/* Logo et droits réservés au centre */
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 2;  /* Plus large pour contenir le logo et les droits */
+    text-align: center;
+}
+
+/* Politique de confidentialité sous les droits réservés */
+.footer-center a {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+/* Instagram à droite */
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;  /* Prend toute la largeur disponible */
+}
+
+.footer-icon {
+    width: 55px;  /* taille augmentée */
+    height: 55px;
+    object-fit: contain;
+}
+
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Réajustement pour l'affichage mobile */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: none;  /* Empêche les éléments de s'étendre sur toute la largeur */
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-center a {
+        margin-top: 10px;
+    }
+}
