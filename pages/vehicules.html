@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Choix du Catalogue - AMH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background: url('../images/fonds.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      background-attachment: scroll;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      flex: 1;
+      display: flex;
+      justify-content: center; /* Centrer verticalement */
+      height: 100vh; /* Assurer que l'overlay prend toute la hauteur de la fenêtre */
+      flex-direction: column;
+    }
+
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-btn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-btn:hover {
+      color: #00d4ff;
+    }
+
+    .site-logo {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 3rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .catalogue-choice-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0 20px;
+      flex: 1;
+      margin-top: 0x; /* Augmenter la marge pour déplacer les cartes vers le bas */
+    }
+
+    .choice-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .choice-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .choice-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .choice-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .choice-card h2 {
+      margin: 20px 0 10px;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .choice-card p {
+      color: #ddd;
+      padding: 0 15px;
+      font-size: 0.95rem;
+    }
+
+    .choice-btn {
+      display: inline-block;
+      margin: 20px auto 30px;
+      padding: 10px 25px;
+      background-color: #00b4d8;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .choice-btn:active {
+      transform: scale(0.98);
+    }
+
+    .choice-btn:hover {
+      background-color: #007ea7;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.7);
+      margin-top: auto;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 10px 20px;
+    }
+
+    .footer-icon {
+      width: 24px;
+      margin-right: 8px;
+    }
+
+    .footer-logo {
+      height: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header.navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .choice-card {
+        width: 90%;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 20px 0 30px; /* Réduit la marge supérieure */
+        font-size: 3rem;
+        font-weight: 600;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
+
+      .footer-left, .footer-center, .footer-right {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+      }
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Ajouter de l'espace avant les cartes de choix */
+    .catalogue-choice-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 0 20px;
+        flex: 1;
+        margin-top: 20px; /* Ajouter un peu d'espace avant les choix */
+    }
+
+    .choice-card {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .choice-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <header class="navbar" role="banner">
+      <nav class="nav-links" role="navigation" aria-label="Navigation principale">
+        <a href="index.html" class="nav-btn">ACCUEIL</a>
+        <a href="#contact" class="nav-btn">CONTACT</a>
+      </nav>
+      <img src="../images/logo.png" alt="Logo de la société A2MH" class="site-logo">
+    </header>      
+    <main>
+      <h1>Choisissez votre univers</h1>
+
+      <section class="catalogue-choice-container">
+        <article class="choice-card">
+          <img src="../images/voitures.jpg" alt="Voitures de Luxe">
+          <h2>Voitures de Luxe</h2>
+          <p>Explorez notre sélection des voitures les plus prestigieuses et performantes au monde.</p>
+          <a href="catalogue.html" class="choice-btn">Voir les Voitures</a>
+        </article>
+
+        <article class="choice-card">
+          <img src="../images/motos.jpg" alt="Motos de Luxe">
+          <h2>Motos de Luxe</h2>
+          <p>Découvrez notre collection de motos exclusives alliant puissance, design et prestige.</p>
+          <a href="motos.html" class="choice-btn">Voir les Motos</a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+        <p>© 2025 A2MH - Tous droits réservés</p>
+        <div>
+          <a href="politique.html" style="color: inherit; text-decoration: underline;">Politique de Confidentialité</a>
+        </div>
+      </footer> 
+  </div>
+</body>
+</html>
