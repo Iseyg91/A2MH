@@ -1,3 +1,529 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-left .site-title {
+    font-size: 1.5em;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+}
+
+.navbar-right .site-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Fond flouté */
+.blur-background {
+    background-image: url("../images/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(25px) brightness(0.6);
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+/* Overlay sombre */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+body {
+    background-image: url('../images/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-title {
+    font-size: 1.5em;
+    color: gold;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;  /* Ajouté pour permettre un meilleur contrôle de la position de la boîte de suggestions */
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;  /* Limiter la largeur de la barre de recherche */
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d4af37;
+    font-size: 16px;
+    background-color: #222;
+    color: white;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar-center {
+        flex: 1;
+        justify-content: flex-start;  /* Centrer la barre de recherche sur les petits écrans */
+        padding-left: 10px;  /* Ajouter un peu de marge */
+    }
+
+    .search-bar {
+        max-width: 300px;  /* Réduire la largeur de la barre de recherche sur mobile */
+    }
+
+    .suggestions {
+        width: 300px;  /* Assurer que la boîte de suggestions est bien positionnée sur mobile */
+    }
+}
+
+.accueil-container {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+.amh-highlight {
+    color: gold;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.suggestions {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    max-width: 700px;  /* S'assurer que la boîte de suggestions a la même largeur que la barre de recherche */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    top: 50px;  /* Assurez-vous que les suggestions s'affichent juste sous la barre de recherche */
+    left: 0;
+    margin: 0;
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Contenu principal */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 120px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Accueil */
+.accueil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+#titre_accueil {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.amh-highlight {
+    background: linear-gradient(90deg, #d4af37, #fff, #d4af37);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 2s linear infinite;
+}
+
+/* CTA Button */
+.cta-btn {
+    background-color: #d4af37;
+    color: #000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #c79a2d;
+}
+
+/* Embeds */
+.embed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.embed:hover {
+    transform: translateY(-5px);
+}
+
+.embed-left {
+    flex-direction: row;
+}
+
+.embed-right {
+    flex-direction: row-reverse;
+}
+
+.embed-text {
+    flex: 1;
+    animation: slideIn 1s ease forwards;
+}
+
+.embed-text h2 {
+    color: #d4af37;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.embed-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.embed-image {
+    flex: 1;
+    background-color: #222;
+    border-radius: 12px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.embed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.5s ease;
+    border: none;
+    margin: 0;
+}
+
+.embed-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-size: 0.9em;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 2;
+    text-align: center;
+}
+
+.footer-center a {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.footer-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar-center {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-center a {
+        margin-top: 10px;
+    }
+
+    .site-logo {
+        height: 30px;
+    }
+
+    .search-bar {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .footer-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-bar {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-left: 20px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 101;
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid gold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+
 body {
   margin: 0;
   padding: 0;
