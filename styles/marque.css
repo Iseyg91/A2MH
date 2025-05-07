@@ -89,7 +89,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 15px;
     padding: 20px;
-    width: calc(20% - 2rem); /* Ajuste la largeur pour avoir 5 éléments par ligne, en prenant en compte l'espace entre eux */
+    width: calc(20% - 2.4rem); /* Ajuste la largeur pour avoir exactement 5 éléments par ligne avec un écart de 2rem */
     text-align: center;
     background: #f9f9f9;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
