@@ -89,7 +89,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 15px;
     padding: 20px;
-    width: 300px;
+    width: calc(20% - 2rem);
     text-align: center;
     background: #f9f9f9;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
