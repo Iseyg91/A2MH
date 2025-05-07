@@ -32,14 +32,12 @@ html, body {
     color: #d4af37;
     font-weight: bold;
 }
-
 .navbar-center {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 60px;
+    justify-content: center;
+    position: relative;  /* Ajouté pour permettre un meilleur contrôle de la position de la boîte de suggestions */
 }
-
 .navbar-right .site-logo {
     height: 40px;
     width: auto;
@@ -121,12 +119,6 @@ body {
     font-weight: bold;
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
 .bar {
     width: 25px;
     height: 3px;
@@ -149,13 +141,6 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 0;
-}
-
-.navbar-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    position: relative;  /* Ajouté pour permettre un meilleur contrôle de la position de la boîte de suggestions */
 }
 
 .search-bar {
