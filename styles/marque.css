@@ -81,7 +81,7 @@ body {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
 }
 
@@ -89,7 +89,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 15px;
     padding: 20px;
-    width: calc(20% - 2rem);
+    width: calc(20% - 2rem); /* Ajuste la largeur pour avoir 5 éléments par ligne, en prenant en compte l'espace entre eux */
     text-align: center;
     background: #f9f9f9;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
