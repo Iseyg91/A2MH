@@ -58,14 +58,14 @@ h1 {
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #3e8ef7;
+  color: #C0C0C0;
 }
 
 .vehicle-info {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 10px;
-  color: #555;
+  color: white;
 }
 
 .price {
@@ -168,7 +168,7 @@ footer {
 
         .nav-btn {
             font-size: 1.1em;
-            color: white;
+            color: #C0C0C0;
             text-decoration: none;
             margin-left: 20px;
             padding: 10px 15px;
