@@ -32,17 +32,19 @@ html, body {
     color: #d4af37;
     font-weight: bold;
 }
+
 .navbar-center {
     flex: 1;
     display: flex;
-    justify-content: center;
-    position: relative;  /* Ajouté pour permettre un meilleur contrôle de la position de la boîte de suggestions */
+    justify-content: flex-end;
+    margin-right: 60px;
 }
 
 .navbar-right .site-logo {
     height: 40px;
     width: auto;
 }
+
 /* Overlay sombre */
 body::before {
     content: "";
@@ -64,10 +66,22 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -75,7 +89,7 @@ body {
     border: 2px solid #ccc;
     border-radius: 15px;
     padding: 20px;
-    width: calc(20% - 2.4rem); /* Ajuste la largeur pour avoir exactement 5 éléments par ligne avec un écart de 2rem */
+    width: calc(20% - 2rem);
     text-align: center;
     background: #f9f9f9;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -107,7 +121,6 @@ body {
 .pagination button:disabled {
     background: #888;
 }
-
 .navbar-left {
     display: flex;
     align-items: center;
@@ -118,6 +131,12 @@ body {
     font-size: 1.5em;
     color: gold;
     font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .bar {
@@ -142,6 +161,13 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 0;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;  /* Ajouté pour permettre un meilleur contrôle de la position de la boîte de suggestions */
 }
 
 .search-bar {
@@ -522,6 +548,17 @@ footer {
 .nav-btn:hover {
     background-color: gold;
     color: black;
+}
+
+.vehicules-container {
+    padding: 100px 20px 40px;
+    text-align: center;
+}
+
+.vehicules-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: gold;
 }
 
 .grid {
