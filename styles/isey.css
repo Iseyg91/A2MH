@@ -1,13 +1,15 @@
 
 body {
-  background-image: url('../images/image.png');
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-  color: #1e1e2f;
+    background-image: url('../images/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Texte par défaut en blanc pour le contraste */
 }
-
 h1 {
   text-align: center;
   margin-top: 40px;
