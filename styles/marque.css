@@ -38,11 +38,11 @@ html, body {
     justify-content: center;
     position: relative;  /* Ajouté pour permettre un meilleur contrôle de la position de la boîte de suggestions */
 }
+
 .navbar-right .site-logo {
     height: 40px;
     width: auto;
 }
-
 /* Overlay sombre */
 body::before {
     content: "";
@@ -107,6 +107,7 @@ body {
 .pagination button:disabled {
     background: #888;
 }
+
 .navbar-left {
     display: flex;
     align-items: center;
@@ -521,17 +522,6 @@ footer {
 .nav-btn:hover {
     background-color: gold;
     color: black;
-}
-
-.vehicules-container {
-    padding: 100px 20px 40px;
-    text-align: center;
-}
-
-.vehicules-title {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: gold;
 }
 
 .grid {
