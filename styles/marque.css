@@ -598,9 +598,10 @@ footer {
     object-fit: contain;
     margin-bottom: 10px;
 }
+
 .marque-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     background-color: rgb(0, 0, 0);
     border-radius: 16px;
     padding: 20px;
