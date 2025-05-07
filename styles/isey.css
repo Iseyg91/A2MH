@@ -141,3 +141,42 @@ footer {
     border-radius: 50%;
     object-fit: cover;
 }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+            box-shadow: 0 8px 16px var(--shadow-color);
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-right: 30px;
+        }
+
+        .nav-btn {
+            font-size: 1.1em;
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-right .site-logo {
+            width: 100px;
+            height: auto;
+        }
