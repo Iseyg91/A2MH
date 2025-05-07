@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogue des Véhicules de Luxe - AMH</title>
+    <link rel="stylesheet" href="../styles/marque.css">
+        <script>
+            // Liste des voitures avec des liens associés vers des pages
+            const cars = [
+                { name: "Ferrari", link: "/catalogue/ferrari.html" },
+                { name: "Lamborghini", link: "/catalogue/lamborghini.html" },
+                { name: "Aston Martin", link: "/catalogue/astonmartin.html" },
+                { name: "Porsche", link: "/catalogue/porsche.html" },
+                { name: "McLaren", link: "/catalogue/mclaren.html" },
+                { name: "Bugatti", link: "/catalogue/bugatti.html" },
+                { name: "Rolls Royce", link: "/catalogue/rollsroyce.html" }
+            ];
+    
+            function showSuggestions(value) {
+                const suggestionsBox = document.getElementById('suggestions');
+                suggestionsBox.innerHTML = '';  // Effacer les suggestions précédentes
+                if (value) {
+                    const filteredSuggestions = cars.filter(car => car.name.toLowerCase().includes(value.toLowerCase()));
+                    filteredSuggestions.forEach(suggestion => {
+                        const div = document.createElement('div');
+                        div.textContent = suggestion.name;
+                        div.onclick = () => selectSuggestion(suggestion);
+                        suggestionsBox.appendChild(div);
+                    });
+                    suggestionsBox.style.display = 'block';
+                } else {
+                    suggestionsBox.style.display = 'none';
+                }
+            }
+    
+            function selectSuggestion(suggestion) {
+                document.querySelector('.search-bar').value = suggestion.name;
+                window.location.href = suggestion.link;  // Redirige vers la page associée
+                document.getElementById('suggestions').style.display = 'none';
+            }
+    
+            // Ajouter un événement de saisie pour afficher les suggestions
+            function handleSearchInput(event) {
+                showSuggestions(event.target.value);
+            }
+        </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <span class="site-title">A2MH - Voitures de Luxe</span>
+            <a href="index.html" class="nav-btn">ACCUEIL</a>
+        </div>
+    <div class="navbar-center">
+        <input type="text" class="search-bar" placeholder="Rechercher votre voiture..." oninput="handleSearchInput(event)">
+        <div id="suggestions" class="suggestions"></div> <!-- Boîte de suggestions -->
+    </div>
+    <div class="navbar-right">
+        <img src="/images/logo.png" alt="Logo AMH" class="site-logo">
+    </div>
+</div>
+    </div>
+    <div class="vehicules-container">
+        <h1 class="vehicules-title">Catalogue Véhicules de Luxe</h1>
+        <div class="grid">
+            <a href="/pages2/aprilia.html"><img src="https://i.pinimg.com/736x/88/91/3d/88913d7c767f6cc3e309a0fe930a6c36.jpg" alt="Aprilia">Aprilia</a>
+            <a href="/pages2/arch.html"><img src="https://i.pinimg.com/736x/ca/53/e2/ca53e22f9982c0184f3341177335a5eb.jpg" alt="Arch">Arch</a>
+            <a href="/pages2/astonmartin.html"><img src="https://images.hindustantimes.com/auto/img/2022/07/20/1600x900/Aston_Martin_logo__2_1658324762075_1658324794527_1658324794527.png" alt="Aston Martin">Aston Martin</a>
+            <a href="/pages2/audi.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcq_FAccCGqoDyK3JbwKoxZUzjVMKP3ME_mA&s" alt="Audi">Audi</a>
+            <a href="/pages2/bentley.html"><img src="https://www.logo-voiture.com/wp-content/uploads/2023/03/logo-bentley-noir-blanc.jpeg" alt="Bentley">Bentley</a>
+            <a href="/pages2/bimota.html"><img src="/images/AMH (1).png" alt="Bimota">Bimota</a>
+            <a href="/pages2/bugatti.html"><img src="https://cdn-s-www.lalsace.fr/images/754C33B2-6FB2-452F-8D1A-AF09DCCA5739/NW_raw/avec-ce-nouveau-logo-bugatti-s-approprie-les-codes-de-l-hyper-luxe-photo-sp-bugatti-1669382515.jpg" alt="Bugatti">Bugatti</a>
+            <a href="/pages2/brabus.html"><img src="/images/AMH (2).png" alt="BRABUS">BRABUS (avec KTM)</a>
+            <a href="/pages2/bmw.html"><img src="https://static.vecteezy.com/ti/vecteur-libre/t1/20500238-bmw-marque-logo-symbole-gris-conception-allemagne-voiture-voiture-vecteur-illustration-avec-noir-contexte-gratuit-vectoriel.jpg" alt="BMW">BMW</a>
+            <a href="/pages2/confederate.html"><img src="/images/confederate.png" alt="Confederate">Confederate</a>
+            <a href="/pages2/curtiss.html"><img src="/images/curtiss.png" alt="Curtiss">Curtiss</a>
+            <a href="/pages2/dodge.html"><img src="https://1000logos.net/wp-content/uploads/2018/04/Symbol-Dodge.jpg" alt="Dodge">Dodge</a>
+            <a href="/pages2/ducati.html"><img src="https://i.pinimg.com/736x/79/e0/c9/79e0c92d50dd7e270955cf0e919ead58.jpg" alt="Ducati">Ducati</a>
+            <a href="/pages2/energica.html"><img src="/images/energica.png" alt="Energica">Energica</a>
+            <a href="/pages2/ferrari.html"><img src="/images/téléchargement (10).png" alt="Ferrari">Ferrari</a>
+            <a href="/pages2/harley.html"><img src="https://i.pinimg.com/736x/31/ff/6f/31ff6f69694ac49287383e27d0f8ea68.jpg" alt="Harley-Davidson">Harley-Davidson</a>
+            <a href="/pages2/honda.html"><img src="https://i.pinimg.com/736x/7b/0f/0c/7b0f0cbc139fcad25cb9443595bf2be4.jpg" alt="Honda">Honda</a>
+            <a href="/pages2/husqvarna.html"><img src="https://i.pinimg.com/736x/66/66/b4/6666b404517c55410aec0d82ec29f18f.jpg" alt="Husqvarna">Husqvarna</a>
+            <a href="/pages2/indian.html"><img src="/images/indian.png" alt="Indian">Indian</a>
+            <a href="/pages2/kawasaki.html"><img src="https://i.pinimg.com/736x/5d/ce/82/5dce824f89fa4b44ab422487afb10668.jpg" alt="Kawasaki">Kawasaki</a>
+            <a href="/pages2/koenigsegg.html"><img src="https://i.pinimg.com/736x/62/52/4a/62524a0f25c29db534aef9329f147268.jpg" alt="Koenigsegg">Koenigsegg</a>
+            <a href="/pages2/ktm.html"><img src="https://i.pinimg.com/736x/c0/6b/7b/c06b7bb7259f1f353185c0c1114caa9e.jpg" alt="KTM">KTM</a>
+            <a href="/pages2/lamborghini.html"><img src="/images/lam.jpg" alt="Lamborghini">Lamborghini</a>
+            <a href="/pages2/langen.html"><img src="/images/langen-logo.png" alt="Langen">Langen</a>
+            <a href="/pages2/lightning.html"><img src="/images/lightling.png" alt="Lightning">Lightning</a>
+            <a href="/pages2/livewire.html"><img src="https://logo-marque.com/wp-content/uploads/2022/01/LiveWire-Nouveau-Logo.jpg" alt="LiveWire">LiveWire (filiale Harley)</a>
+            <a href="/pages2/mazda.html"><img src="https://bpando.org/wp-content/uploads/0-Mazda-Logo-History-Rei-Yoshimura-PAOS-1975-Logo-Histories-BPO-Rich-Baird.jpg" alt="Mazda">Mazda</a>
+            <a href="/pages2/mclaren.html"><img src="/images/mcl.jpg" alt="McLaren">McLaren</a>
+            <a href="/pages2/maserati.html"><img src="/images/mas.jpg" alt="Maserati">Maserati</a>
+            <a href="/pages2/mercedes.html"><img src="https://i.pinimg.com/736x/78/c7/2c/78c72c0122fd6cb42573ed25dc91ac3f.jpg" alt="Mercedes-Benz">Mercedes-Benz</a>
+            <a href="/pages2/motoguzzi.html"><img src="https://logo-marque.com/wp-content/uploads/2021/04/Moto-Guzzi-Symbole.jpg" alt="Moto Guzzi">Moto Guzzi</a>
+            <a href="/pages2/mustang.html"><img src="https://stickers-4u.myshopify.com/cdn/shop/products/mustangwhite.jpg?v=1628780993" alt="Mustang">Mustang</a>
+            <a href="/pages2/mvagusta.html"><img src="https://bikedecoders.com/wp-content/uploads/2022/03/MV-Agusta-Motorcycles-Logo.jpeg" alt="MV Agusta">MV Agusta</a>
+            <a href="/pages2/norton.html"><img src="https://i.pinimg.com/originals/97/d9/e7/97d9e7d428bf5ab60b15650d6a24fc9b.jpg" alt="Norton">Norton</a>
+            <a href="/pages2/pagani.html"><img src="https://www.north49decals.com/cdn/shop/products/pagani2.jpg?v=1590111981&width=1445" alt="Pagani">Pagani</a>
+            <a href="/pages2/porsche.html"><img src="https://i.pinimg.com/736x/09/37/f4/0937f40ce3eabc5d9bd068608ee30777.jpg" alt="Porsche">Porsche</a>
+            <a href="/pages2/rimac.html"><img src="https://inspirauto.fr/Logos/logo-Rimac.png" alt="Rimac">Rimac</a>
+            <a href="/pages2/rollsroyce.html"><img src="https://i.pinimg.com/736x/c1/88/44/c188449046209b74ff571913e2f6387b.jpg" alt="Rolls Royce">Rolls Royce</a>
+            <a href="/pages2/sarolea.html"><img src="/images/sarolea.png" alt="Saroléa">Saroléa</a>
+            <a href="/pages2/tesla.html"><img src="https://i.pinimg.com/736x/e8/69/8a/e8698aff4ee01f5215761e4aa77234b8.jpg" alt="Tesla">Tesla</a>
+            <a href="/pages2/triumph.html"><img src="https://i.pinimg.com/736x/93/93/9f/93939f3b810218b4f672bb1633b2cbb1.jpg" alt="Triumph">Triumph</a>
+            <a href="/pages2/vyrus.html"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Vyrus.jpg" alt="Vyrus">Vyrus</a>
+            <a href="/pages2/voxan.html"><img src="https://www.voxan.mc/wp-content/themes/voxan-2021/media/voxan-logo-secondary-white-hd.png" alt="Voxan">Voxan</a>
+            <a href="/pages2/yamaha.html"><img src="https://motohaft.pl/123-large_default/yamaha-logo-white.jpg" alt="Yamaha">Yamaha</a>
+            <a href="/pages2/zero.html"><img src="https://images.squarespace-cdn.com/content/v1/5cdcc78390f90446fe85da6a/1612463108819-6TS0N9NC4L0Z9VZ66AUP/Zero+Motorcycles+Logo.png" alt="Zero">Zero</a>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../images/telephone.png" alt="Téléphone" class="footer-icon">
+            <span>01 23 94 29 10</span>
+        </div>
+
+        <div class="footer-center">
+            <img src="../images/GT3RS.jpg" alt="Logo AMH" class="footer-logo">
+            <p>© 2025 AMH - Tous droits réservés</p>
+            <div>
+                <a href="politique.html" style="color: inherit; text-decoration: underline;">Politique de Confidentialité</a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <a href="https://www.instagram.com/amh.voiture.de.luxe/" target="_blank">
+                <img src="../images/instagram.png" alt="Instagram" class="footer-icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
