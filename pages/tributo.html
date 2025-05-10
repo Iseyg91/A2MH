@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réserver une Ferrari F8 Tributo</title>
     <link rel="stylesheet" href="../styles/catalogue.css">
+    <link rel="stylesheet" href="../styles/catalogue.css">
     <style>
         :root {
-            --primary-color: #FF1D25; /* Rouge Ferrari */
-            --secondary-color: #1C1C1C; /* Noir carbone */
-            --highlight-color: #C0C0C0; /* Argent pour le contraste */
-            --background-color: #121212;
-            --shadow-color: rgba(0, 0, 0, 0.5);
+            --primary-color: gold;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff0000;
+            --background-color: #333;
+            --highlight-color: #ffcc00;
+            --shadow-color: rgba(255, 215, 0, 0.3);
         }
 
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            background-color: #121212;
         }
 
         .navbar {
@@ -107,6 +109,7 @@
 
         .car-gallery-img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
             transition: transform 0.3s ease;
         }
@@ -127,12 +130,12 @@
             font-size: 2em;
             color: var(--primary-color);
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le nom de la voiture */
             padding-bottom: 5px;
         }
 
         .price-amount {
-            color: var(--highlight-color);
+            color: var(--accent-color);
             font-size: 1.5em;
             font-weight: bold;
         }
@@ -151,7 +154,7 @@
         .car-specs li {
             margin: 10px 0;
             font-size: 1.1em;
-            background-color: #333;
+            background-color: #444;
             padding: 10px;
             border-radius: 8px;
         }
@@ -167,7 +170,7 @@
         .reservation-form h3 {
             color: var(--primary-color);
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le titre de la réservation */
             padding-bottom: 5px;
         }
 
@@ -185,6 +188,7 @@
             border-radius: 6px;
             color: white;
             font-size: 1em;
+            transition: border-color 0.3s ease;
         }
 
         .reservation-form textarea {
@@ -198,7 +202,7 @@
 
         .reservation-form button {
             background-color: var(--primary-color);
-            color: #fff;
+            color: #000;
             padding: 15px;
             border-radius: 6px;
             text-align: center;
@@ -211,7 +215,7 @@
         }
 
         .reservation-form button:hover {
-            background-color: #a30000;
+            background-color: var(--highlight-color);
         }
 
         footer {
