@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="../styles/catalogue.css">
     <style>
         :root {
-            --primary-color: #B88A4A; /* Doré clair, pour rappeler la finition luxueuse */
-            --secondary-color: #2B2B2B; /* Gris foncé, raffinement élégant */
-            --accent-color: #C0C0C0; /* Argenté, évoque la brillance et l'exclusivité */
-            --background-color: #1C1C1C; /* Noir pour un fond sophistiqué */
-            --highlight-color: #FFD700; /* Or, pour les détails saillants */
-            --shadow-color: rgba(184, 138, 74, 0.3); /* Ombres discrètes dorées */
+            --primary-color: gold;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff0000;
+            --background-color: #333;
+            --highlight-color: #ffcc00;
+            --shadow-color: rgba(255, 215, 0, 0.3);
         }
 
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            background-color: #121212;
         }
 
         .navbar {
@@ -27,7 +27,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: var(--secondary-color);
+            background-color: #000;
             box-shadow: 0 8px 16px var(--shadow-color);
         }
 
@@ -129,7 +129,7 @@
             font-size: 2em;
             color: var(--primary-color);
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le nom de la voiture */
             padding-bottom: 5px;
         }
 
@@ -169,7 +169,7 @@
         .reservation-form h3 {
             color: var(--primary-color);
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le titre de la réservation */
             padding-bottom: 5px;
         }
 
@@ -218,7 +218,7 @@
         }
 
         footer {
-            background-color: var(--secondary-color);
+            background-color: #000;
             color: white;
             text-align: center;
             padding: 20px;
