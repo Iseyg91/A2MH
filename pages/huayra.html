@@ -129,7 +129,7 @@
             font-size: 2em;
             color: var(--primary-color);
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le nom de la voiture */
             padding-bottom: 5px;
         }
 
@@ -169,7 +169,7 @@
         .reservation-form h3 {
             color: var(--primary-color);
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le titre de la réservation */
             padding-bottom: 5px;
         }
 
@@ -228,83 +228,6 @@
         footer p {
             margin: 0;
         }
-        /* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 20px;
-}
-
-/* Section gauche : numéro de téléphone */
-.footer-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;  /* Prend toute la largeur disponible */
-}
-
-/* Logo et droits réservés au centre */
-.footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex: 2;  /* Plus large pour contenir le logo et les droits */
-    text-align: center;
-}
-
-/* Politique de confidentialité sous les droits réservés */
-.footer-center a {
-    margin-top: 5px;
-    font-size: 0.8em;
-}
-
-/* Instagram à droite */
-.footer-right {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;  /* Prend toute la largeur disponible */
-}
-
-.footer-icon {
-    width: 55px;  /* taille augmentée */
-    height: 55px;
-    object-fit: contain;
-}
-
-
-.footer-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Réajustement pour l'affichage mobile */
-@media screen and (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-left,
-    .footer-center,
-    .footer-right {
-        flex: none;  /* Empêche les éléments de s'étendre sur toute la largeur */
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-center a {
-        margin-top: 10px;
-    }
-}
     </style>
 </head>
 <body>
