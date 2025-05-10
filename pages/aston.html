@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="../styles/catalogue.css">
     <style>
         :root {
-            --primary-color: #004225; /* Vert Racing Aston Martin */
-            --secondary-color: #1a1a1a; /* Noir profond */
-            --accent-color: #ffffff; /* Blanc pour contraste */
-            --background-color: #101010; /* Fond sombre élégant */
-            --highlight-color: #c0b283; /* Champagne doré */
-            --shadow-color: rgba(0, 66, 37, 0.3); /* Ombre verte */
+            --primary-color: gold;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff0000;
+            --background-color: #333;
+            --highlight-color: #ffcc00;
+            --shadow-color: rgba(255, 215, 0, 0.3);
         }
 
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            background-color: #121212;
         }
 
         .navbar {
@@ -38,7 +38,7 @@
 
         .site-title {
             font-size: 1.8em;
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-right: 30px;
         }
 
@@ -53,7 +53,7 @@
         }
 
         .nav-btn:hover {
-            background-color: var(--highlight-color);
+            background-color: var(--primary-color);
         }
 
         .navbar-right .site-logo {
@@ -66,7 +66,7 @@
             max-width: 1200px;
             margin: auto;
             color: white;
-            background: linear-gradient(to bottom, #2a2a2a, var(--background-color));
+            background: linear-gradient(to bottom, #2a2a2a, #121212);
             border-radius: 12px;
             box-shadow: 0 8px 16px var(--shadow-color);
         }
@@ -75,7 +75,7 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 40px;
-            color: var(--highlight-color);
+            color: var(--primary-color);
         }
 
         .car-details {
@@ -127,9 +127,9 @@
 
         .car-name {
             font-size: 2em;
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le nom de la voiture */
             padding-bottom: 5px;
         }
 
@@ -167,9 +167,9 @@
         }
 
         .reservation-form h3 {
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le titre de la réservation */
             padding-bottom: 5px;
         }
 
@@ -195,12 +195,12 @@
         }
 
         .reservation-form input:focus, .reservation-form textarea:focus {
-            border-color: var(--highlight-color);
+            border-color: var(--primary-color);
             outline: none;
         }
 
         .reservation-form button {
-            background-color: var(--highlight-color);
+            background-color: var(--primary-color);
             color: #000;
             padding: 15px;
             border-radius: 6px;
@@ -214,86 +214,20 @@
         }
 
         .reservation-form button:hover {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--highlight-color);
         }
 
         footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 20px;
-}
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -8px 16px var(--shadow-color);
+        }
 
-/* Section gauche : numéro de téléphone */
-.footer-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;  /* Prend toute la largeur disponible */
-}
-
-/* Logo et droits réservés au centre */
-.footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex: 2;  /* Plus large pour contenir le logo et les droits */
-    text-align: center;
-}
-
-/* Politique de confidentialité sous les droits réservés */
-.footer-center a {
-    margin-top: 5px;
-    font-size: 0.8em;
-}
-
-/* Instagram à droite */
-.footer-right {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;  /* Prend toute la largeur disponible */
-}
-
-.footer-icon {
-    width: 55px;  /* taille augmentée */
-    height: 55px;
-    object-fit: contain;
-}
-
-
-.footer-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Réajustement pour l'affichage mobile */
-@media screen and (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-left,
-    .footer-center,
-    .footer-right {
-        flex: none;  /* Empêche les éléments de s'étendre sur toute la largeur */
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-center a {
-        margin-top: 10px;
-    }
-}
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
