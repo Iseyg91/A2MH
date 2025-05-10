@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="../styles/catalogue.css">
     <style>
         :root {
-            --primary-color: #000000;
-            --secondary-color: #1c1c1c;
-            --highlight-color: #005BAC; /* Bleu Yamaha */
-            --background-color: #111111;
-            --accent-color: #f1f1f1;
-            --shadow-color: rgba(0, 0, 0, 0.5);
+            --primary-color: gold;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff0000;
+            --background-color: #333;
+            --highlight-color: #ffcc00;
+            --shadow-color: rgba(255, 215, 0, 0.3);
         }
 
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            color: var(--accent-color);
+            background-color: #121212;
         }
 
         .navbar {
@@ -39,7 +38,7 @@
 
         .site-title {
             font-size: 1.8em;
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-right: 30px;
         }
 
@@ -54,7 +53,7 @@
         }
 
         .nav-btn:hover {
-            background-color: var(--highlight-color);
+            background-color: var(--primary-color);
         }
 
         .navbar-right .site-logo {
@@ -62,63 +61,63 @@
             height: auto;
         }
 
-        .bike-reservation {
+        .car-reservation {
             padding: 120px 20px;
             max-width: 1200px;
             margin: auto;
-            background-color: var(--secondary-color);
+            color: white;
+            background: linear-gradient(to bottom, #2a2a2a, #121212);
             border-radius: 12px;
             box-shadow: 0 8px 16px var(--shadow-color);
         }
 
-        .bike-title {
+        .car-title {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 40px;
-            color: var(--highlight-color);
-            text-transform: uppercase;
+            color: var(--primary-color);
         }
 
-        .bike-details {
+        .car-details {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
-            gap: 30px;
             margin-bottom: 60px;
+            gap: 30px;
         }
 
-        .bike-images {
+        .car-images {
             flex: 1;
         }
 
-        .bike-main-img {
+        .car-main-img {
             width: 100%;
             border-radius: 12px;
             box-shadow: 0 8px 16px var(--shadow-color);
             transition: transform 0.3s ease;
         }
 
-        .bike-main-img:hover {
+        .car-main-img:hover {
             transform: scale(1.05);
         }
 
-        .bike-gallery {
+        .car-gallery {
             display: flex;
             margin-top: 15px;
             gap: 10px;
         }
 
-        .bike-gallery-img {
+        .car-gallery-img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
             transition: transform 0.3s ease;
         }
 
-        .bike-gallery-img:hover {
+        .car-gallery-img:hover {
             transform: scale(1.05);
         }
 
-        .bike-info {
+        .car-info {
             flex: 1;
             background-color: var(--secondary-color);
             border-radius: 12px;
@@ -126,43 +125,37 @@
             box-shadow: 0 8px 16px var(--shadow-color);
         }
 
-        .bike-name {
+        .car-name {
             font-size: 2em;
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le nom de la voiture */
             padding-bottom: 5px;
-            text-transform: uppercase;
         }
 
         .price-amount {
-            color: var(--highlight-color);
+            color: var(--accent-color);
             font-size: 1.5em;
             font-weight: bold;
         }
 
-        .bike-desc {
+        .car-desc {
             margin: 20px 0;
             font-size: 1.1em;
             line-height: 1.6;
         }
 
-        .bike-specs {
+        .car-specs {
             list-style-type: none;
             padding-left: 0;
         }
 
-        .bike-specs li {
+        .car-specs li {
             margin: 10px 0;
             font-size: 1.1em;
-            background-color: #2a2a2a;
+            background-color: #444;
             padding: 10px;
             border-radius: 8px;
-        }
-
-        .bike-video iframe {
-            border-radius: 12px;
-            box-shadow: 0 8px 16px var(--shadow-color);
         }
 
         .reservation-form {
@@ -174,9 +167,9 @@
         }
 
         .reservation-form h3 {
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le titre de la réservation */
             padding-bottom: 5px;
         }
 
@@ -186,8 +179,7 @@
             font-size: 1.1em;
         }
 
-        .reservation-form input,
-        .reservation-form textarea {
+        .reservation-form input, .reservation-form textarea {
             width: 100%;
             padding: 10px;
             background-color: var(--background-color);
@@ -195,17 +187,24 @@
             border-radius: 6px;
             color: white;
             font-size: 1em;
+            transition: border-color 0.3s ease;
         }
 
         .reservation-form textarea {
             height: 100px;
         }
 
+        .reservation-form input:focus, .reservation-form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
         .reservation-form button {
-            background-color: var(--highlight-color);
-            color: #fff;
+            background-color: var(--primary-color);
+            color: #000;
             padding: 15px;
             border-radius: 6px;
+            text-align: center;
             font-size: 1.2em;
             border: none;
             cursor: pointer;
@@ -215,8 +214,7 @@
         }
 
         .reservation-form button:hover {
-            background-color: var(--accent-color);
-            color: #000;
+            background-color: var(--highlight-color);
         }
 
         footer {
@@ -225,6 +223,10 @@
             text-align: center;
             padding: 20px;
             box-shadow: 0 -8px 16px var(--shadow-color);
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
