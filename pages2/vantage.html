@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="../styles/catalogue.css">
     <style>
         :root {
-            --primary-color: #D4AF37;
-            --secondary-color: #222222;
-            --highlight-color: #000000;
-            --background-color: #121212;
-            --shadow-color: rgba(0, 0, 0, 0.5);
+            --primary-color: gold;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ff0000;
+            --background-color: #333;
+            --highlight-color: #ffcc00;
+            --shadow-color: rgba(255, 215, 0, 0.3);
         }
 
         body {
@@ -37,7 +38,7 @@
 
         .site-title {
             font-size: 1.8em;
-            color: white;
+            color: var(--primary-color);
             margin-right: 30px;
         }
 
@@ -52,7 +53,7 @@
         }
 
         .nav-btn:hover {
-            background-color: var(--highlight-color);
+            background-color: var(--primary-color);
         }
 
         .navbar-right .site-logo {
@@ -74,7 +75,7 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 40px;
-            color: var(--highlight-color);
+            color: var(--primary-color);
         }
 
         .car-details {
@@ -126,14 +127,14 @@
 
         .car-name {
             font-size: 2em;
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le nom de la voiture */
             padding-bottom: 5px;
         }
 
         .price-amount {
-            color: var(--primary-color);
+            color: var(--accent-color);
             font-size: 1.5em;
             font-weight: bold;
         }
@@ -166,9 +167,9 @@
         }
 
         .reservation-form h3 {
-            color: var(--highlight-color);
+            color: var(--primary-color);
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--highlight-color); /* Surligner le titre de la réservation */
             padding-bottom: 5px;
         }
 
@@ -194,7 +195,7 @@
         }
 
         .reservation-form input:focus, .reservation-form textarea:focus {
-            border-color: var(--highlight-color);
+            border-color: var(--primary-color);
             outline: none;
         }
 
